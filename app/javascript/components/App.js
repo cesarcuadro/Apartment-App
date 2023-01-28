@@ -21,7 +21,7 @@ const App = (props) => {
 
   const createApartment = (apartment) => {
     console.log("Created Apartment:", apartment);
-    fetch("http://localhost:3000/apartments", {
+    fetch("/apartments", {
       body: JSON.stringify(apartment),
       headers: {
         "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const App = (props) => {
   const updateApartment = (apartment, id) => {
     console.log("Apartment:", apartment);
     console.log("id:", id);
-    fetch(`http://localhost:3000/apartments/${id}`, {
+    fetch(`/apartments/${id}`, {
       body: JSON.stringify(apartment),
       headers: {
         "Content-Type" : "application/json"
